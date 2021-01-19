@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/question"
+            android:textSize="18sp"
+            android:textStyle="italic|bold"
+            tools:text="Question: 1" />
+
+        <TextView
+            android:id="@+id/text_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_id"
+            android:layout_marginBottom="8dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="Que é Deus?" />
+
+        <ImageView
+            android:id="@+id/image_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_question"
+            android:contentDescription="@string/desc_answer"
+            android:src="@drawable/ic_quote_24dp"
+            android:textStyle="italic"
+            app:tint="@color/quote" />
+
+        <TextView
+            android:id="@+id/text_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_question"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/image_quote"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            tools:text="Deus é a inteligência suprema, causa primária de todas as coisas." />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

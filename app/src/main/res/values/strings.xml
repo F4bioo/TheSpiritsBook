@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">The Spirits\' Book</string>
+
+    <string name="text_question_id">Question %s</string>
+    <string name="desc_answer">Answer</string>
+
+    <!-- ListFragment -->
+    <string name="search">Search</string>
+    <string name="symbol_empty_list">⍥</string>
+    <string name="text_empty_list">nothing!!</string>
+
 </resources>
