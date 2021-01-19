@@ -11,6 +11,9 @@ constructor(
     private val apiService: ApiService,
 ) : MainRepository {
 
+    override suspend fun insertList(queAnsList: ArrayList<QueAns>) {
+    }
+
     override suspend fun queAnsList(): ArrayList<QueAns> {
         val response = apiService.getQueAnsList()
         if (response.isSuccessful) {
@@ -24,6 +27,9 @@ constructor(
         } else {
             throw Exception("Unsuccessful response")
         }
+    }
+
+    override suspend fun deleteList() {
     }
 
     // Convert QueAnsApiEntity to QueAns

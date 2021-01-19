@@ -4,8 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import fbo.costa.thespiritsbook.repository.DataSource
 import fbo.costa.thespiritsbook.repository.MainRepository
-import fbo.costa.thespiritsbook.repository.RetrofitDataSource
 import javax.inject.Singleton
 
 @Module
@@ -15,6 +15,6 @@ abstract class RepositoryModule {
     @Singleton
     @Binds
     abstract fun provideMainRepository(
-        apiDataSource: RetrofitDataSource
+        dataSource: DataSource
     ): MainRepository
 }
