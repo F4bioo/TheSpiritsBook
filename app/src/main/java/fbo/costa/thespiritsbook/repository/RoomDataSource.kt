@@ -14,7 +14,7 @@ constructor(
     override suspend fun insertList(queAnsList: ArrayList<QueAns>) {
         val queAnsRoomList = arrayListOf<QueAnsRoomEntity>()
         queAnsList.forEach { _queAns ->
-            queAnsRoomList.add(_queAns.toQueAnsEntity())
+            queAnsRoomList.add(_queAns.toQueAnsRoomEntity())
         }
         queAnsDao.insert(queAnsRoomList)
     }
@@ -33,7 +33,7 @@ constructor(
     }
 
     // Convert QueAns to QueAnsRoomEntity for database INSERT
-    private fun QueAns.toQueAnsEntity(): QueAnsRoomEntity {
+    private fun QueAns.toQueAnsRoomEntity(): QueAnsRoomEntity {
         return QueAnsRoomEntity(
             id = this.id,
             question = this.question,

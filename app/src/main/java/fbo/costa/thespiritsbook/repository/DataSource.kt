@@ -11,6 +11,7 @@ constructor(
 ) : MainRepository {
 
     override suspend fun insertList(queAnsList: ArrayList<QueAns>) {
+        roomDataSource.insertList(queAnsList)
     }
 
     override suspend fun queAnsList(): ArrayList<QueAns> {
@@ -18,7 +19,7 @@ constructor(
 
         return if (queAnsRoomList.isNullOrEmpty()) {
             val queAnsApiList = retrofitDataSource.queAnsList()
-            roomDataSource.insertList(queAnsApiList)
+            insertList(queAnsApiList)
             queAnsApiList // return from Api
         } else {
             queAnsRoomList // return from Database
@@ -26,5 +27,6 @@ constructor(
     }
 
     override suspend fun deleteList() {
+        roomDataSource.deleteList()
     }
 }
