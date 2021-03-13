@@ -7,7 +7,7 @@
     'destinations' within an Android application that provides)
   - MVVM architecture for separating responsibilities from the code base.
   - Coroutines with suspend functions to ensure that they are not executed in the main thread.
-  - API Rest com Retrofit.
+  - API Rest with Retrofit.
   - api https://livrodosespiritos.herokuapp.com/
 
 <img src="screen_capture.png" width="30%"></img>
